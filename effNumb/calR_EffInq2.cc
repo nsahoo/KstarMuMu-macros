@@ -89,9 +89,9 @@ void calR_EffInq2(TString data, TString type, int iBin){
 
   TChain *ch = new TChain("tree");
   if (data == "small"){
-    ch->Add("../afb-run1/mc-cut0-jul14/sel_BToKstarMuMu-8TeV-merged-cut0_mc.lite_s0.root");
+    ch->Add("../../afb-run1/mc-cut0-jul14/sel_BToKstarMuMu-8TeV-merged-cut0_mc.lite_s0.root");
   } else if(data == "large"){
-    ch->Add("../afb-run1/mc-cut0-jul14/sel_BToKstarMuMu-8TeV-merged-*.root");
+    ch->Add("../../afb-run1/mc-cut0-jul14/sel_BToKstarMuMu-8TeV-merged-*.root");
   }
 
   TTree *treein = ch;
@@ -162,7 +162,7 @@ void calR_EffInq2(TString data, TString type, int iBin){
       }
     }else{
       printf("Wrong argument given, please xcheck !\n");
-      printf("./calEff data type\n");
+      printf("./calR_EffInq2 data type\n");
       printf("data: small, large; type: gen, reco \n");
       return 0;
     }

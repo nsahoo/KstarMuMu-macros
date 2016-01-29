@@ -83,9 +83,9 @@ void calEffInCosl(TString data, int iBin){
 
   TChain *ch = new TChain("tree");
   if (data == "small"){
-    ch->Add("../afb-run1/v1/BToKstarMuMu/plugins/unfilt-mc-genonly/sel_BToKstarMuMu-genonly-8TeV.root_mc_s0.root");
+    ch->Add("../../afb-run1/v1/BToKstarMuMu/plugins/unfilt-mc-genonly/sel_BToKstarMuMu-genonly-8TeV.root_mc_s0.root");
   } else if(data == "large"){
-    ch->Add("../afb-run1/v1/BToKstarMuMu/plugins/unfilt-mc-genonly/sel_BToKstarMuMu-genonly-8TeV.root_mc_s*.root");
+    ch->Add("../../afb-run1/v1/BToKstarMuMu/plugins/unfilt-mc-genonly/sel_BToKstarMuMu-genonly-8TeV.root_mc_s*.root");
   }
   TTree *treein = ch;
   printf("%lld entries processed.\n",ch->GetEntries());
