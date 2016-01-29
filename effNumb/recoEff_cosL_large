@@ -1,0 +1,114 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+116720431 entries processed.
+
+INFO: gen cosl range: [ -1.00--0.70 ] 
+INFO: #reco evts in bin 0 : 3586205 
+INFO: #passed reco evts in bin 0 : 18425 
+INFO: reco. efficiency in bin 0 : 0.005138 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ -0.70--0.30 ] 
+INFO: #reco evts in bin 1 : 16940780 
+INFO: #passed reco evts in bin 1 : 67499 
+INFO: reco. efficiency in bin 1 : 0.003984 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ -0.30-0.00 ] 
+INFO: #reco evts in bin 2 : 24214865 
+INFO: #passed reco evts in bin 2 : 74237 
+INFO: reco. efficiency in bin 2 : 0.003066 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ 0.00-0.30 ] 
+INFO: #reco evts in bin 3 : 27120063 
+INFO: #passed reco evts in bin 3 : 88911 
+INFO: reco. efficiency in bin 3 : 0.003278 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ 0.30-0.70 ] 
+INFO: #reco evts in bin 4 : 28929907 
+INFO: #passed reco evts in bin 4 : 134008 
+INFO: reco. efficiency in bin 4 : 0.004632 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ 0.70-1.00 ] 
+INFO: #reco evts in bin 5 : 15928611 
+INFO: #passed reco evts in bin 5 : 102378 
+INFO: reco. efficiency in bin 5 : 0.006427 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ -1.00-1.00 ] 
+INFO: #reco evts in bin 6 : 116720431 
+INFO: #passed reco evts in bin 6 : 498863 
+INFO: reco. efficiency in bin 6 : 0.004274 
+----------------------------------------------------------
+
+ reco eff calculated in cosL bins taking info from reco level 
+
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+116720431 entries processed.
+
+INFO: gen cosl range: [ -1.00--0.70 ] 
+INFO: #reco evts in bin 0 : 3586205 
+INFO: #passed reco evts in bin 0 : 18935 
+INFO: reco. efficiency in bin 0 : 0.005280 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ -0.70--0.30 ] 
+INFO: #reco evts in bin 1 : 16940780 
+INFO: #passed reco evts in bin 1 : 69264 
+INFO: reco. efficiency in bin 1 : 0.004089 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ -0.30-0.00 ] 
+INFO: #reco evts in bin 2 : 24214865 
+INFO: #passed reco evts in bin 2 : 77112 
+INFO: reco. efficiency in bin 2 : 0.003184 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ 0.00-0.30 ] 
+INFO: #reco evts in bin 3 : 27120063 
+INFO: #passed reco evts in bin 3 : 92241 
+INFO: reco. efficiency in bin 3 : 0.003401 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ 0.30-0.70 ] 
+INFO: #reco evts in bin 4 : 28929907 
+INFO: #passed reco evts in bin 4 : 137256 
+INFO: reco. efficiency in bin 4 : 0.004744 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ 0.70-1.00 ] 
+INFO: #reco evts in bin 5 : 15928611 
+INFO: #passed reco evts in bin 5 : 104055 
+INFO: reco. efficiency in bin 5 : 0.006533 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosl range: [ -1.00-1.00 ] 
+INFO: #reco evts in bin 6 : 116720431 
+INFO: #passed reco evts in bin 6 : 498863 
+INFO: reco. efficiency in bin 6 : 0.004274 
+----------------------------------------------------------
+
+ reco eff calculated in cosL bins taking info from gen level 
+

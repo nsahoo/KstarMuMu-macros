@@ -1,0 +1,171 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+35080733 entries processed.
+
+INFO: gen q2 range: [ 1.00-4.30 ] 
+INFO: #gen. evts in bin 0 : 4978182 
+INFO: #acc. evts in bin 0 : 156969 
+INFO: acceptance efficiency in bin 0 : 0.0315 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 4.30-8.68 ] 
+INFO: #gen. evts in bin 1 : 7418391 
+INFO: #acc. evts in bin 1 : 250804 
+INFO: acceptance efficiency in bin 1 : 0.0338 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 8.68-10.09 ] 
+INFO: #gen. evts in bin 2 : 2780591 
+INFO: #acc. evts in bin 2 : 101852 
+INFO: acceptance efficiency in bin 2 : 0.0366 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 10.09-12.86 ] 
+INFO: #gen. evts in bin 3 : 5763164 
+INFO: #acc. evts in bin 3 : 234212 
+INFO: acceptance efficiency in bin 3 : 0.0406 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 12.86-14.18 ] 
+INFO: #gen. evts in bin 4 : 2731613 
+INFO: #acc. evts in bin 4 : 123446 
+INFO: acceptance efficiency in bin 4 : 0.0452 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 14.18-16.00 ] 
+INFO: #gen. evts in bin 5 : 3481090 
+INFO: #acc. evts in bin 5 : 171758 
+INFO: acceptance efficiency in bin 5 : 0.0493 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 16.00-19.00 ] 
+INFO: #gen. evts in bin 6 : 3728857 
+INFO: #acc. evts in bin 6 : 210401 
+INFO: acceptance efficiency in bin 6 : 0.0564 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen q2 range: [ 1.00-19.00 ] 
+INFO: #gen. evts in bin 7 : 30881888 
+INFO: #acc. evts in bin 7 : 1249442 
+INFO: acceptance efficiency in bin 7 : 0.0405 
+----------------------------------------------------------
+
+ acc eff calculation done in q2 bins.
+
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+35080733 entries processed.
+
+INFO: gen cosk range: [ -1.00--0.70 ] 
+INFO: #gen. evts in bin 0 : 6770603 
+INFO: #acc. evts in bin 0 : 272666 
+INFO: acceptance efficiency in bin 0 : 0.0403 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosk range: [ -0.70-0.00 ] 
+INFO: #gen. evts in bin 1 : 10622871 
+INFO: #acc. evts in bin 1 : 413502 
+INFO: acceptance efficiency in bin 1 : 0.0389 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosk range: [ 0.00-0.40 ] 
+INFO: #gen. evts in bin 2 : 5525626 
+INFO: #acc. evts in bin 2 : 211798 
+INFO: acceptance efficiency in bin 2 : 0.0383 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosk range: [ 0.40-0.80 ] 
+INFO: #gen. evts in bin 3 : 7269241 
+INFO: #acc. evts in bin 3 : 285559 
+INFO: acceptance efficiency in bin 3 : 0.0393 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosk range: [ 0.80-1.00 ] 
+INFO: #gen. evts in bin 4 : 4892392 
+INFO: #acc. evts in bin 4 : 195930 
+INFO: acceptance efficiency in bin 4 : 0.0400 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosk range: [ -1.00-1.00 ] 
+INFO: #gen. evts in bin 5 : 35080733 
+INFO: #acc. evts in bin 5 : 1379455 
+INFO: acceptance efficiency in bin 5 : 0.0393 
+----------------------------------------------------------
+
+ acc eff calculation done in cosk bins.
+
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+35080733 entries processed.
+
+INFO: gen cosl range: [ -1.00--0.70 ] 
+INFO: #gen. evts in bin 0 : 2547976 
+INFO: #acc. evts in bin 0 : 42354 
+INFO: acceptance efficiency in bin 0 : 0.0166 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosl range: [ -0.70--0.30 ] 
+INFO: #gen. evts in bin 1 : 5666149 
+INFO: #acc. evts in bin 1 : 199878 
+INFO: acceptance efficiency in bin 1 : 0.0353 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosl range: [ -0.30-0.00 ] 
+INFO: #gen. evts in bin 2 : 5502515 
+INFO: #acc. evts in bin 2 : 286391 
+INFO: acceptance efficiency in bin 2 : 0.0520 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosl range: [ 0.00-0.30 ] 
+INFO: #gen. evts in bin 3 : 6190118 
+INFO: #acc. evts in bin 3 : 320220 
+INFO: acceptance efficiency in bin 3 : 0.0517 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosl range: [ 0.30-0.70 ] 
+INFO: #gen. evts in bin 4 : 8715692 
+INFO: #acc. evts in bin 4 : 342335 
+INFO: acceptance efficiency in bin 4 : 0.0393 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosl range: [ 0.70-1.00 ] 
+INFO: #gen. evts in bin 5 : 6458283 
+INFO: #acc. evts in bin 5 : 188277 
+INFO: acceptance efficiency in bin 5 : 0.0292 
+----------------------------------------------------------
+35080733 entries processed.
+
+INFO: gen cosl range: [ -1.00-1.00 ] 
+INFO: #gen. evts in bin 6 : 35080733 
+INFO: #acc. evts in bin 6 : 1379455 
+INFO: acceptance efficiency in bin 6 : 0.0393 
+----------------------------------------------------------
+
+ acc eff calculation done in cosl bins.
+

@@ -1,0 +1,128 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+116720431 entries processed.
+
+INFO: q2 range: [ 1.00-4.30 ] 
+INFO: #reco evts in bin 0 : 13312515 
+INFO: #passed reco evts in bin 0 : 52740 
+INFO: reco. efficiency in bin 0 : 0.003962 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 4.30-8.68 ] 
+INFO: #reco evts in bin 1 : 21267818 
+INFO: #passed reco evts in bin 1 : 90020 
+INFO: reco. efficiency in bin 1 : 0.004233 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 8.68-10.09 ] 
+INFO: #reco evts in bin 2 : 8656120 
+INFO: #passed reco evts in bin 2 : 35698 
+INFO: reco. efficiency in bin 2 : 0.004124 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 10.09-12.86 ] 
+INFO: #reco evts in bin 3 : 19754732 
+INFO: #passed reco evts in bin 3 : 87788 
+INFO: reco. efficiency in bin 3 : 0.004444 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 12.86-14.18 ] 
+INFO: #reco evts in bin 4 : 10429386 
+INFO: #passed reco evts in bin 4 : 44404 
+INFO: reco. efficiency in bin 4 : 0.004258 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 14.18-16.00 ] 
+INFO: #reco evts in bin 5 : 14550389 
+INFO: #passed reco evts in bin 5 : 66223 
+INFO: reco. efficiency in bin 5 : 0.004551 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 16.00-19.00 ] 
+INFO: #reco evts in bin 6 : 17746671 
+INFO: #passed reco evts in bin 6 : 86517 
+INFO: reco. efficiency in bin 6 : 0.004875 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 1.00-19.00 ] 
+INFO: #reco evts in bin 7 : 105717631 
+INFO: #passed reco evts in bin 7 : 493560 
+INFO: reco. efficiency in bin 7 : 0.004669 
+----------------------------------------------------------
+
+ reco eff calculated in q2 bins taking info from reco level 
+
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+116720431 entries processed.
+
+INFO: q2 range: [ 1.00-4.30 ] 
+INFO: #reco evts in bin 0 : 13312515 
+INFO: #passed reco evts in bin 0 : 53248 
+INFO: reco. efficiency in bin 0 : 0.004000 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 4.30-8.68 ] 
+INFO: #reco evts in bin 1 : 21267818 
+INFO: #passed reco evts in bin 1 : 91996 
+INFO: reco. efficiency in bin 1 : 0.004326 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 8.68-10.09 ] 
+INFO: #reco evts in bin 2 : 8656120 
+INFO: #passed reco evts in bin 2 : 39178 
+INFO: reco. efficiency in bin 2 : 0.004526 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 10.09-12.86 ] 
+INFO: #reco evts in bin 3 : 19754732 
+INFO: #passed reco evts in bin 3 : 92940 
+INFO: reco. efficiency in bin 3 : 0.004705 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 12.86-14.18 ] 
+INFO: #reco evts in bin 4 : 10429386 
+INFO: #passed reco evts in bin 4 : 51166 
+INFO: reco. efficiency in bin 4 : 0.004906 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 14.18-16.00 ] 
+INFO: #reco evts in bin 5 : 14550389 
+INFO: #passed reco evts in bin 5 : 74243 
+INFO: reco. efficiency in bin 5 : 0.005102 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 16.00-19.00 ] 
+INFO: #reco evts in bin 6 : 17746671 
+INFO: #passed reco evts in bin 6 : 92785 
+INFO: reco. efficiency in bin 6 : 0.005228 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: q2 range: [ 1.00-19.00 ] 
+INFO: #reco evts in bin 7 : 105717631 
+INFO: #passed reco evts in bin 7 : 495556 
+INFO: reco. efficiency in bin 7 : 0.004688 
+----------------------------------------------------------
+
+ reco eff calculated in q2 bins taking info from gen level 
+

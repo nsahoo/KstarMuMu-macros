@@ -1,0 +1,100 @@
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+116720431 entries processed.
+
+INFO: gen cosk range: [ -1.00--0.70 ] 
+INFO: #reco evts in bin 0 : 23091612 
+INFO: #passed reco evts in bin 0 : 110050 
+INFO: reco. efficiency in bin 0 : 0.004766 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ -0.70-0.00 ] 
+INFO: #reco evts in bin 1 : 34944999 
+INFO: #passed reco evts in bin 1 : 162381 
+INFO: reco. efficiency in bin 1 : 0.004647 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ 0.00-0.40 ] 
+INFO: #reco evts in bin 2 : 17904878 
+INFO: #passed reco evts in bin 2 : 71655 
+INFO: reco. efficiency in bin 2 : 0.004002 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ 0.40-0.80 ] 
+INFO: #reco evts in bin 3 : 24210497 
+INFO: #passed reco evts in bin 3 : 86233 
+INFO: reco. efficiency in bin 3 : 0.003562 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ 0.80-1.00 ] 
+INFO: #reco evts in bin 4 : 16568445 
+INFO: #passed reco evts in bin 4 : 46820 
+INFO: reco. efficiency in bin 4 : 0.002826 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ -1.00-1.00 ] 
+INFO: #reco evts in bin 5 : 116720431 
+INFO: #passed reco evts in bin 5 : 498863 
+INFO: reco. efficiency in bin 5 : 0.004274 
+----------------------------------------------------------
+
+ reco eff calculated in cosK bins taking info from reco level 
+
+
+[1mRooFit v3.60 -- Developed by Wouter Verkerke and David Kirkby[0m 
+                Copyright (C) 2000-2013 NIKHEF, University of California & Stanford University
+                All rights reserved, please read http://roofit.sourceforge.net/license.txt
+
+116720431 entries processed.
+
+INFO: gen cosk range: [ -1.00--0.70 ] 
+INFO: #reco evts in bin 0 : 23091612 
+INFO: #passed reco evts in bin 0 : 113894 
+INFO: reco. efficiency in bin 0 : 0.004932 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ -0.70-0.00 ] 
+INFO: #reco evts in bin 1 : 34944999 
+INFO: #passed reco evts in bin 1 : 169271 
+INFO: reco. efficiency in bin 1 : 0.004844 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ 0.00-0.40 ] 
+INFO: #reco evts in bin 2 : 17904878 
+INFO: #passed reco evts in bin 2 : 77162 
+INFO: reco. efficiency in bin 2 : 0.004310 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ 0.40-0.80 ] 
+INFO: #reco evts in bin 3 : 24210497 
+INFO: #passed reco evts in bin 3 : 90296 
+INFO: reco. efficiency in bin 3 : 0.003730 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ 0.80-1.00 ] 
+INFO: #reco evts in bin 4 : 16568445 
+INFO: #passed reco evts in bin 4 : 48240 
+INFO: reco. efficiency in bin 4 : 0.002912 
+----------------------------------------------------------
+116720431 entries processed.
+
+INFO: gen cosk range: [ -1.00-1.00 ] 
+INFO: #reco evts in bin 5 : 116720431 
+INFO: #passed reco evts in bin 5 : 498863 
+INFO: reco. efficiency in bin 5 : 0.004274 
+----------------------------------------------------------
+
+ reco eff calculated in cosK bins taking info from gen level 
+
