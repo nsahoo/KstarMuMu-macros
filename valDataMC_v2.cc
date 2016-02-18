@@ -169,6 +169,8 @@ void valDataMC_v2(){
   TH1D *h_psp_bkg[nH];
   TH1D *h_psp_diff[nH];
 
+  TH1D *h_data[nH];
+  TH1D *h_mc[nH];
 
   //*****************
   // DEFINE CANVAS 
@@ -185,10 +187,15 @@ void valDataMC_v2(){
   TCanvas *e2[nH];
   TCanvas *f2[nH];
 
+  TCanvas *cv[nH];
+
+
   //
+  TString dirName     = "vaLv2";
   TString varName[nH] = {"BpT", "Bphi", "Bvtxcl", "Bls", "Bcos", "Trkpt", "Trkdca", "Kshortpt"};
   TString  Xtitle[nH] = {"B^{+} p_{T} (GeV)", "B^{+} #phi", "B^{+} vtx. CL", "B^{+} L_{xy}/#sigma", "B^{+} cos(#alpha)", "#pi trk p_{T} (GeV)", "#pi trk DCA/#sigma", "K_{s} p_{T} (GeV)"};
-  TString Ytitle = "Norm. entries";
+  TString      Ytitle = "Norm. entries";
+  TString     YtitleT = "#entries";
   //
 
 
@@ -254,41 +261,41 @@ void valDataMC_v2(){
     //-------- DATA CANVAS -------
     d[j] = new TCanvas(Form("d[%i]",j),Form("Canvas_data_sig_%i",j), 800, 600);
     //h_data_sig[j]->Sumw2();
-    h_data_sig[j]->Scale(1./h_data_sig[j]->Integral());
+    //h_data_sig[j]->Scale(1./h_data_sig[j]->Integral());
     h_data_sig[j]->GetYaxis()->SetTitleOffset(1.5);
     h_data_sig[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-    h_data_sig[j]->SetYTitle(Form("%s", Ytitle.Data()));
+    h_data_sig[j]->SetYTitle(Form("%s", YtitleT.Data()));
     //h_data_sig[j]->SetMarkerStyle(20);
     h_data_sig[j]->Draw("");
-    //d[j]->Print(Form("valJPS/data_sig_%s.pdf", varName.Data()));
-    d[j]->SaveAs(Form("valJPS/data_sig_%s.pdf", varName[j].Data()));
+    //d[j]->Print(Form("%s/data_sig_%s.pdf", dirName.Data(), varName.Data()));
+    d[j]->SaveAs(Form("%s/data_sig_%s.pdf", dirName.Data(), varName[j].Data()));
     
  
     e[j] = new TCanvas(Form("e[%i]",j),Form("Canvas_data_bkg_%i",j), 800, 600);
     //h_data_bkg[j]->Sumw2();
-    h_data_bkg[j]->Scale(1./h_data_bkg[j]->Integral());
+    //h_data_bkg[j]->Scale(1./h_data_bkg[j]->Integral());
     h_data_bkg[j]->GetYaxis()->SetTitleOffset(1.5);
     h_data_bkg[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-    h_data_bkg[j]->SetYTitle(Form("%s", Ytitle.Data()));
+    h_data_bkg[j]->SetYTitle(Form("%s", YtitleT.Data()));
     //h_data_bkg[j]->SetMarkerStyle(20);
     h_data_bkg[j]->Draw("");
-    //e[j]->Print(Form("valJPS/data_bkg_%s.pdf", varName.Data()));
-    e[j]->SaveAs(Form("valJPS/data_bkg_%s.pdf", varName[j].Data()));
+    //e[j]->Print(Form("%s/data_bkg_%s.pdf", dirName.Data(), varName.Data()));
+    e[j]->SaveAs(Form("%s/data_bkg_%s.pdf", dirName.Data(), varName[j].Data()));
 
 
     f[j] = new TCanvas(Form("f[%i]",j),Form("Canvas_data_diff_%i",j), 800, 600);
     //h_data_diff[j]->Sumw2();
-    h_data_diff[j]->Scale(1./h_data_diff[j]->Integral());
+    //h_data_diff[j]->Scale(1./h_data_diff[j]->Integral());
     h_data_diff[j]->GetYaxis()->SetTitleOffset(1.5);
     h_data_diff[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-    h_data_diff[j]->SetYTitle(Form("%s", Ytitle.Data()));
+    h_data_diff[j]->SetYTitle(Form("%s", YtitleT.Data()));
     //h_data_diff[j]->SetLineColor(kBlack);
     //h_data_diff[j]->SetLineStyle(1);
     //h_data_diff[j]->SetLineWidth(2);
     //h_data_diff[j]->SetMarkerStyle(20);
     h_data_diff[j]->Draw("");
-    //f[j]->Print(Form("valJPS/data_diff_%s.pdf", varName.Data()));
-    f[j]->SaveAs(Form("valJPS/data_diff_%s.pdf", varName[j].Data()));
+    //f[j]->Print(Form("%s/data_diff_%s.pdf", dirName.Data(), varName.Data()));
+    f[j]->SaveAs(Form("%s/data_diff_%s.pdf", dirName.Data(), varName[j].Data()));
 
 
    
@@ -308,7 +315,7 @@ void valDataMC_v2(){
     }
 
     // fill histo selecting sideband ONLY                                                                                                                                        
-    if ( ( MMmasJP < (JPSI_MASS - 2.5*MMmasEJP) || MMmasJP > (JPSI_MASS + 2.5*MMmasEJP) ) ) {
+    if ( ( MMmasJP < (JPSI_MASS - 3*MMmasEJP) || MMmasJP > (JPSI_MASS + 3*MMmasEJP) ) ) {
 
       if (!(BmasJP > 0)) continue;
       if (!(BmasJP > 5.0 && BmasJP < 5.56)) continue;
@@ -334,33 +341,33 @@ void valDataMC_v2(){
 
   //-------- JPSI CANVAS -------                                                                                                                                                 
   d1[j] = new TCanvas(Form("d1[%i]",j),Form("Canvas_jps_sig_%i",j), 800, 600);
-  h_jps_sig[j]->Scale(1./h_jps_sig[j]->Integral());
+  //h_jps_sig[j]->Scale(1./h_jps_sig[j]->Integral());
   h_jps_sig[j]->GetYaxis()->SetTitleOffset(1.5);
   h_jps_sig[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-  h_jps_sig[j]->SetYTitle(Form("%s", Ytitle.Data()));
+  h_jps_sig[j]->SetYTitle(Form("%s", YtitleT.Data()));
   //h_jps_sig[j]->SetMarkerStyle(20);                                                                                                                                           
   h_jps_sig[j]->Draw("");
-  //d1[j]->Print(Form("valJPS/jps_sig_%s.pdf", varName.Data()));                                                                                                               
-  d1[j]->SaveAs(Form("valJPS/jps_sig_%s.pdf", varName[j].Data()));                                                                                                           
+  //d1[j]->Print(Form("%s/jps_sig_%s.pdf", dirName.Data(), varName.Data()));                                                                                             
+  d1[j]->SaveAs(Form("%s/jps_sig_%s.pdf", dirName.Data(), varName[j].Data()));                                                                                              
 
 
   e1[j] = new TCanvas(Form("e1[%i]",j),Form("Canvas_jps_bkg_%i",j), 800, 600);
-  h_jps_bkg[j]->Scale(1./h_jps_bkg[j]->Integral());
+  //h_jps_bkg[j]->Scale(1./h_jps_bkg[j]->Integral());
   h_jps_bkg[j]->GetYaxis()->SetTitleOffset(1.5);
   h_jps_bkg[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-  h_jps_bkg[j]->SetYTitle(Form("%s", Ytitle.Data()));
+  h_jps_bkg[j]->SetYTitle(Form("%s", YtitleT.Data()));
   //h_jps_bkg[j]->SetMarkerStyle(20);                                                                                                                                           
   h_jps_bkg[j]->Draw("");
-  //e1[j]->Print(Form("valJPS/jps_bkg_%s.pdf", varName.Data()));                                                                                                               
-  e1[j]->SaveAs(Form("valJPS/jps_bkg_%s.pdf", varName[j].Data()));                                                                                                           
+  //e1[j]->Print(Form("%s/jps_bkg_%s.pdf", dirName.Data(), varName.Data()));                                                                                                 
+  e1[j]->SaveAs(Form("%s/jps_bkg_%s.pdf", dirName.Data(), varName[j].Data()));                                                                            
 
 
   f1[j] = new TCanvas(Form("f1[%i]",j),Form("Canvas_jps_diff_%i",j), 800, 600);
   //h_jps_diff[j]->Scale(DATALUMI/JPSILUMI);    // scale according to lumi
-  h_jps_diff[j]->Scale(1./h_jps_diff[j]->Integral());
+  //h_jps_diff[j]->Scale(1./h_jps_diff[j]->Integral());
   h_jps_diff[j]->GetYaxis()->SetTitleOffset(1.5);
   h_jps_diff[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-  h_jps_diff[j]->SetYTitle(Form("%s", Ytitle.Data()));
+  h_jps_diff[j]->SetYTitle(Form("%s", YtitleT.Data()));
   //h_jps_diff[j]->SetLineColor(kBlack);
   //h_jps_diff[j]->SetFillColor(kAzure+6);
   //h_jps_diff[j]->SetLineColor(kRed);
@@ -369,8 +376,8 @@ void valDataMC_v2(){
   //h_jps_diff[j]->Sumw2();
   //h_jps_diff[j]->SetMarkerStyle(20);                                                                                                                                          
   h_jps_diff[j]->Draw("");
-  //f1[j]->Print(Form("valJPS/jps_diff_%s.pdf", varName.Data()));                                                                                                              
-  f1[j]->SaveAs(Form("valJPS/jps_diff_%s.pdf", varName[j].Data()));                                                                                                          
+  //f1[j]->Print(Form("%s/jps_diff_%s.pdf", dirName.Data(), varName.Data()));                                                                                          
+  f1[j]->SaveAs(Form("%s/jps_diff_%s.pdf", dirName.Data(), varName[j].Data()));                                                                               
 
 
 
@@ -378,11 +385,11 @@ void valDataMC_v2(){
     chpsp->GetEntry(i);
 
     // fill histo selecting psip region ONLY                                                                                                                              
-    if ( ( MMmasPS > (PSI2S_MASS - 2.5*MMmasEPS) && MMmasPS < (PSI2S_MASS + 2.5*MMmasEPS) ) ) {
+    if ( ( MMmasPS > (PSI2S_MASS - 3*MMmasEPS) && MMmasPS < (PSI2S_MASS + 3*MMmasEPS) ) ) {
 
       if (!(BmasPS > 5.0 && BmasPS < 5.56)) continue;
-      //if (!(BmasPS > BPLUS_MASS-2.5*sigma && BmasPS < BPLUS_MASS+2.5*sigma ) ) continue;                                                                                     
-      if (!(BmasPS > 5.22 && BmasPS < 5.34)) continue;
+      if (!(BmasPS > BPLUS_MASS-2.5*sigma && BmasPS < BPLUS_MASS+2.5*sigma ) ) continue;                                                                                     
+      //if (!(BmasPS > 5.22 && BmasPS < 5.34)) continue;
       if (!(KstmasPS > 0.792 && KstmasPS < 0.992)) continue;
       if (!(varPS[3] > 10. && varPS[4] > 0.999 && varPS[5] > 0.35 && varPS[6] > 0.7 && varPS[7] > 0.9)) continue;
 
@@ -390,12 +397,12 @@ void valDataMC_v2(){
     }
 
     // fill histo selecting sideband ONLY                                                                                                                               
-    if ( ( MMmasPS < (PSI2S_MASS - 2.5*MMmasEPS) || MMmasPS > (PSI2S_MASS + 2.5*MMmasEPS) ) ) {
+    if ( ( MMmasPS < (PSI2S_MASS - 3*MMmasEPS) || MMmasPS > (PSI2S_MASS + 3*MMmasEPS) ) ) {
 
       if (!(BmasPS > 0)) continue;
       if (!(BmasPS > 5.0 && BmasPS < 5.56)) continue;
-      //if (!( (BmasPS < BPLUS_MASS-2.5*sigma && BmasPS > BPLUS_MASS-5*sigma) || (BmasPS > BPLUS_MASS+2.5*sigma && BmasPS < BPLUS_MASS+5*sigma) ) ) continue;                   
-      if (!( ( BmasPS < 5.22 && BmasPS > 5.16 ) || (BmasPS > 5.34 && BmasPS < 5.40) ) ) continue;
+      if (!( (BmasPS < BPLUS_MASS-2.5*sigma && BmasPS > BPLUS_MASS-5*sigma) || (BmasPS > BPLUS_MASS+2.5*sigma && BmasPS < BPLUS_MASS+5*sigma) ) ) continue;                   
+      //if (!( ( BmasPS < 5.22 && BmasPS > 5.16 ) || (BmasPS > 5.34 && BmasPS < 5.40) ) ) continue;
       if (!(KstmasPS > 0.792 && KstmasPS < 0.992)) continue;
       if (!(varPS[3] > 10. && varPS[4] > 0.999 && varPS[5] > 0.35 && varPS[6] > 0.7 && varPS[7] > 0.9)) continue;
 
@@ -414,48 +421,83 @@ void valDataMC_v2(){
 
   //-------- PSIP CANVAS -------                                                                                                                                               
   d2[j] = new TCanvas(Form("d2[%i]",j),Form("Canvas_psp_sig_%i",j), 800, 600);
-  h_psp_sig[j]->Scale(1./h_psp_sig[j]->Integral());
+  //h_psp_sig[j]->Scale(1./h_psp_sig[j]->Integral());
   h_psp_sig[j]->GetYaxis()->SetTitleOffset(1.5);
   h_psp_sig[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-  h_psp_sig[j]->SetYTitle(Form("%s", Ytitle.Data()));
-  h_psp_sig[j]->SetStats(1);
+  h_psp_sig[j]->SetYTitle(Form("%s", YtitleT.Data()));
   //h_psp_sig[j]->SetMarkerStyle(20);                                                                                                                                   
   h_psp_sig[j]->Draw("");
-  //d2[j]->Print(Form("valPSP/psp_sig_%s.pdf", varName.Data()));                                                                                                
-  d2[j]->SaveAs(Form("valPSP/psp_sig_%s.pdf", varName[j].Data()));
+  //d2[j]->Print(Form("%s/psp_sig_%s.pdf", dirName.Data(), varName.Data()));                                                                                                
+  d2[j]->SaveAs(Form("%s/psp_sig_%s.pdf", dirName.Data(), varName[j].Data()));
 
 
   e2[j] = new TCanvas(Form("e2[%i]",j),Form("Canvas_psp_bkg_%i",j), 800, 600);
-  h_psp_bkg[j]->Scale(1./h_psp_bkg[j]->Integral());
+  //h_psp_bkg[j]->Scale(1./h_psp_bkg[j]->Integral());
   h_psp_bkg[j]->GetYaxis()->SetTitleOffset(1.5);
   h_psp_bkg[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-  h_psp_bkg[j]->SetYTitle(Form("%s", Ytitle.Data()));
-  h_psp_bkg[j]->SetStats(1);
+  h_psp_bkg[j]->SetYTitle(Form("%s", YtitleT.Data()));
   //h_psp_bkg[j]->SetMarkerStyle(20);                                                                                                                             
   h_psp_bkg[j]->Draw("");
-  //e2[j]->Print(Form("valPSP/psp_bkg_%s.pdf", varName.Data()));                                                                                                      
-  e2[j]->SaveAs(Form("valPSP/psp_bkg_%s.pdf", varName[j].Data()));
+  //e2[j]->Print(Form("%s/psp_bkg_%s.pdf", dirName.Data(), varName.Data()));                                                                                                      
+  e2[j]->SaveAs(Form("%s/psp_bkg_%s.pdf", dirName.Data(), varName[j].Data()));
 
 
   f2[j] = new TCanvas(Form("f2[%i]",j),Form("Canvas_psp_diff_%i",j), 800, 600);                                                                                                
   //h_psp_diff[j]->Scale(DATALUMI/PSIPLUMI);
-  h_psp_diff[j]->Scale(1./h_psp_diff[j]->Integral());
+  //h_psp_diff[j]->Scale(1./h_psp_diff[j]->Integral());
   h_psp_diff[j]->GetYaxis()->SetTitleOffset(1.5);
   h_psp_diff[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
-  h_psp_diff[j]->SetYTitle(Form("%s", Ytitle.Data()));
+  h_psp_diff[j]->SetYTitle(Form("%s", YtitleT.Data()));
   //h_psp_diff[j]->SetLineColor(kBlack);                                                                                                                                          
   //h_psp_diff[j]->SetFillColor(kAzure+6);                                                                                                                                        
-  h_psp_diff[j]->SetLineColor(kRed);
-  h_psp_diff[j]->SetLineStyle(1);
-  h_psp_diff[j]->SetLineWidth(2);
+  //h_psp_diff[j]->SetLineColor(kRed);
+  //h_psp_diff[j]->SetLineStyle(1);
+  //h_psp_diff[j]->SetLineWidth(2);
   //h_psp_diff[j]->Sumw2();                                                                                                                                                       
   //h_psp_diff[j]->SetMarkerStyle(20);                                                                                                                                            
   h_psp_diff[j]->Draw("");                                                                                                                                                     
-  //f2[j]->Print(Form("valPSP/psp_diff_%s.pdf", varName.Data()));                                                                                                              
-  f2[j]->SaveAs(Form("valPSP/psp_diff_%s.pdf", varName[j].Data()));            
+  //f2[j]->Print(Form("%s/psp_diff_%s.pdf", dirName.Data(), varName.Data()));                                                                                             
+  f2[j]->SaveAs(Form("%s/psp_diff_%s.pdf", dirName.Data(), varName[j].Data()));            
 
 
+  //
 
+  h_jps_diff[j]->Scale(DATALUMI/JPSILUMI); 
+  h_psp_diff[j]->Scale(DATALUMI/PSIPLUMI);
+
+
+  h_data[j] = static_cast<TH1D*>(h_data_diff[j]->Clone(Form("h_data[%i]",j)));
+  h_mc[j]   = static_cast<TH1D*>(h_jps_diff[j]->Clone(Form("h_mc[%i]",j)));
+  h_mc[j]->Add(h_psp_diff[j]);
+
+
+  h_data[j]->Scale(1./h_data[j]->Integral());
+  h_mc[j]->Scale(1./h_mc[j]->Integral());
+
+
+  cv[j] = new TCanvas(Form("cv[%i]",j),Form("cv_val_dataMC_var%i",j), 800, 600); 
+
+  h_mc[j]->GetYaxis()->SetRangeUser(0.0,(h_mc[j]->GetBinContent(h_mc[j]->GetMaximumBin()) > h_data[j]->GetBinContent(h_data[j]->GetMaximumBin()) ?    
+					      h_mc[j]->GetBinContent(h_mc[j]->GetMaximumBin()) : h_data[j]->GetBinContent(h_data[j]->GetMaximumBin()))*1.1);
+  h_data[j]->GetYaxis()->SetRangeUser(0.0,(h_mc[j]->GetBinContent(h_mc[j]->GetMaximumBin()) > h_data[j]->GetBinContent(h_data[j]->GetMaximumBin()) ?   
+					      h_mc[j]->GetBinContent(h_mc[j]->GetMaximumBin()) : h_data[j]->GetBinContent(h_data[j]->GetMaximumBin()))*1.1);
+
+
+  h_mc[j]->Draw("");
+  h_data[j]->Draw("same");
+
+
+  TLegend *leg = new TLegend(0.63,0.645,0.83,0.845,"");                                                                                                                          
+  leg->AddEntry(h_mc[j],"MC");                                                                                                                                    
+  leg->AddEntry(h_data[j],"Data");                                                                                                                                
+  leg->SetFillColor(0);                                                                                                                                                         
+  leg->SetBorderSize(0);                                                                                                                                                   
+  leg->Draw();     
+
+
+  cv[j]->Modified();                                                                                                                                                             
+  cv[j]->Update();                                                                                                                                                              
+  cv[j]->SaveAs(Form("%s/val_dataMC_jpsi_%s.pdf", dirName.Data(), varName[j].Data())); 
 
 
 
@@ -469,7 +511,7 @@ void valDataMC_v2(){
   }
   */
 
-
+  /*
   f1[j] = new TCanvas(Form("f1[%i]",j),Form("Canvas_val_dataMC_var%i",j), 800, 600); 
   h_jps_diff[j]->Draw("");
   h_data_diff[j]->Draw("same");
@@ -491,7 +533,7 @@ void valDataMC_v2(){
   f1[j]->Modified();
   f1[j]->Update();
   f1[j]->SaveAs(Form("valJPS/val_dataMC_jpsi_%s.pdf", varName[j].Data()));
-
+  */
 
 
   }
