@@ -149,9 +149,9 @@ void valDataMC_v2(){
   const double sigma = 0.0315;
 
 
-  double nBinsX[nH] = {100, 60, 100, 100, 100, 50, 50, 100};
+  double nBinsX[nH] = {50, 30, 50, 50, 100, 50, 25, 50};
   double   minX[nH] = {0., -3.0, 0., 0., 0.999, 0., 0., 0.};
-  double   maxX[nH] = {100., 3.0, 1., 100., 1., 5., 50., 10.};
+  double   maxX[nH] = {100., 3.0, 1., 100., 1., 10., 50., 10.};
 
 
   //**********************
@@ -191,7 +191,7 @@ void valDataMC_v2(){
 
 
   //
-  TString dirName     = "vaLv2";
+  TString dirName     = "vaLv3";
   TString varName[nH] = {"BpT", "Bphi", "Bvtxcl", "Bls", "Bcos", "Trkpt", "Trkdca", "Kshortpt"};
   TString  Xtitle[nH] = {"B^{+} p_{T} (GeV)", "B^{+} #phi", "B^{+} vtx. CL", "B^{+} L_{xy}/#sigma", "B^{+} cos(#alpha)", "#pi trk p_{T} (GeV)", "#pi trk DCA/#sigma", "K_{s} p_{T} (GeV)"};
   TString      Ytitle = "Norm. entries";
@@ -232,11 +232,14 @@ void valDataMC_v2(){
 	h_data_sig[j]->Fill(var[j]);
       }
 
+
+
+     
       // fill histo selecting sideband ONLY
       if ( ( MMmas < (JPSI_MASS - 3*MMmasE) || MMmas > (JPSI_MASS + 3*MMmasE) ) && ( MMmas < (PSI2S_MASS - 3*MMmasE) || MMmas > (PSI2S_MASS + 3*MMmasE) )  ) {
 
 	//if (!( MMmas < (PSI2S_MASS - 3*MMmasE) || MMmas > (PSI2S_MASS + 3*MMmasE) ) ) continue; 
-	if (!(Bmas > 0)) continue;
+	//if (!(Bmas > 0)) continue;
 	if (!(Bmas > 5.0 &&Bmas < 5.56)) continue;
 	if (!( (Bmas < BPLUS_MASS-2.5*sigma && Bmas > BPLUS_MASS-5*sigma) || (Bmas > BPLUS_MASS+2.5*sigma && Bmas < BPLUS_MASS+5*sigma) ) ) continue;
 	//if (!( ( Bmas < 5.22 && Bmas > 5.16 ) || (Bmas > 5.34 && Bmas < 5.40) ) ) continue;
@@ -245,11 +248,35 @@ void valDataMC_v2(){
 
 	h_data_bkg[j]->Fill(var[j]);
       }
-
      
+
+
+      /*
+      // fill histo selecting sideband ONLY                                                                                                                                
+      //if ( ( MMmas < (JPSI_MASS - 3*MMmasE) || MMmas > (JPSI_MASS + 3*MMmasE) ) && ( MMmas < (PSI2S_MASS - 3*MMmasE) || MMmas > (PSI2S_MASS + 3*MMmasE) )  ) {                  
+      if ( (Bmas < BPLUS_MASS-2.5*sigma && Bmas > BPLUS_MASS-5*sigma) || (Bmas > BPLUS_MASS+2.5*sigma && Bmas < BPLUS_MASS+5*sigma) ){                               
+
+        if (!(Bmas > 5.0 &&Bmas < 5.56)) continue;                                                                                                                               
+	if (! ( ( MMmas > (JPSI_MASS - 3*MMmasE) && MMmas < (JPSI_MASS + 3*MMmasE) ) || ( MMmas > (PSI2S_MASS - 3*MMmasE) && MMmas < (PSI2S_MASS + 3*MMmasE) ) ) ) continue;
+        //if (!( (Bmas < BPLUS_MASS-2.5*sigma && Bmas > BPLUS_MASS-5*sigma) || (Bmas > BPLUS_MASS+2.5*sigma && Bmas < BPLUS_MASS+5*sigma) ) ) continue;                   
+        //if (!( ( Bmas < 5.22 && Bmas > 5.16 ) || (Bmas > 5.34 && Bmas < 5.40) ) ) continue;                                                                                 
+        if (!(Kstmas > 0.792 && Kstmas < 0.992)) continue;                                                                                                                      
+        if (!(var[3] > 10. && var[4] > 0.999 && var[5] > 0.35 && var[6] > 0.7 && var[7] > 0.9)) continue;                                                                       
+                                                                                                                                                                                
+        h_data_bkg[j]->Fill(var[j]);                                                                                                                                              
+      }                                    
+      */
+
+
+
       h_data_diff[j]->Add(h_data_sig[j],h_data_bkg[j], 1., -1.);
 
     } // data entry loop end
+
+
+
+
+
 
 
     cout << "------- INTEGRAL VALUES (DATA): VAR " << j << " --------" << endl;						   						   
@@ -260,7 +287,7 @@ void valDataMC_v2(){
 
     //-------- DATA CANVAS -------
     d[j] = new TCanvas(Form("d[%i]",j),Form("Canvas_data_sig_%i",j), 800, 600);
-    //h_data_sig[j]->Sumw2();
+    h_data_sig[j]->Sumw2();
     //h_data_sig[j]->Scale(1./h_data_sig[j]->Integral());
     h_data_sig[j]->GetYaxis()->SetTitleOffset(1.5);
     h_data_sig[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
@@ -272,7 +299,7 @@ void valDataMC_v2(){
     
  
     e[j] = new TCanvas(Form("e[%i]",j),Form("Canvas_data_bkg_%i",j), 800, 600);
-    //h_data_bkg[j]->Sumw2();
+    h_data_bkg[j]->Sumw2();
     //h_data_bkg[j]->Scale(1./h_data_bkg[j]->Integral());
     h_data_bkg[j]->GetYaxis()->SetTitleOffset(1.5);
     h_data_bkg[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
@@ -284,7 +311,7 @@ void valDataMC_v2(){
 
 
     f[j] = new TCanvas(Form("f[%i]",j),Form("Canvas_data_diff_%i",j), 800, 600);
-    //h_data_diff[j]->Sumw2();
+    h_data_diff[j]->Sumw2();
     //h_data_diff[j]->Scale(1./h_data_diff[j]->Integral());
     h_data_diff[j]->GetYaxis()->SetTitleOffset(1.5);
     h_data_diff[j]->SetXTitle(Form("%s", Xtitle[j].Data()));
@@ -475,6 +502,21 @@ void valDataMC_v2(){
   h_mc[j]->Scale(1./h_mc[j]->Integral());
 
 
+  //
+  cout << h_data[j]->Integral() << endl;
+  cout << h_mc[j]->Integral() << endl;
+  //
+
+  /*
+  for (unsigned int it = 0; it < nBinsX[j]; it++){                                                                                                                             
+    h_mc[j]->SetBinContent(it+1,h_mc[j]->GetBinContent(it+1) / h_mc[j]->GetBinWidth(it+1));                                                                   
+    h_mc[j]->SetBinError(it+1,h_mc[j]->GetBinError(it+1) / h_mc[j]->GetBinWidth(it+1));                                                                        
+                                                                                                                                                                                  
+    h_data[j]->SetBinContent(it+1,h_data[j]->GetBinContent(it+1) / h_data[j]->GetBinWidth(it+1));                                                                  
+    h_data[j]->SetBinError(it+1,h_data[j]->GetBinError(it+1) / h_data[j]->GetBinWidth(it+1));                                                                  
+  }         
+  */
+
   cv[j] = new TCanvas(Form("cv[%i]",j),Form("cv_val_dataMC_var%i",j), 800, 600); 
 
   h_mc[j]->GetYaxis()->SetRangeUser(0.0,(h_mc[j]->GetBinContent(h_mc[j]->GetMaximumBin()) > h_data[j]->GetBinContent(h_data[j]->GetMaximumBin()) ?    
@@ -483,8 +525,13 @@ void valDataMC_v2(){
 					      h_mc[j]->GetBinContent(h_mc[j]->GetMaximumBin()) : h_data[j]->GetBinContent(h_data[j]->GetMaximumBin()))*1.1);
 
 
+  h_mc[j]->SetStats(kFALSE);
+  h_data[j]->SetStats(kFALSE);
+  h_mc[j]->SetYTitle(Form("%s", Ytitle.Data()));
+  h_data[j]->SetMarkerStyle(20);
+
   h_mc[j]->Draw("");
-  h_data[j]->Draw("same");
+  h_data[j]->Draw("e1psame");
 
 
   TLegend *leg = new TLegend(0.63,0.645,0.83,0.845,"");                                                                                                                          
@@ -538,7 +585,7 @@ void valDataMC_v2(){
 
   }
   
-  // --- JPSI LOOP END ---
+
 
 
 }
